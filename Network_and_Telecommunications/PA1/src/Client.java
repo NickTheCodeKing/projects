@@ -48,7 +48,6 @@ public class Client implements Runnable {
                 client.close();
             }
         } catch (Exception e) {
-            // ignore
         }
     }
 

@@ -27,6 +27,7 @@ public class Server implements Runnable {
         try {
             server = new ServerSocket(port);
             pool = Executors.newCachedThreadPool();
+            System.out.println("Server listening on port " + port);
             while (!done) {
 
                 Socket client = server.accept();
