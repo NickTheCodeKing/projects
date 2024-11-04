@@ -24,21 +24,21 @@ public class WordCount {
         System.out.println("----------------------------------------------------");
         for (File file : filteredFiles) {
             String mostFrequentWord = getMostFrequentWord(file, 6);
-            System.out.printf("File Name: %s\tWord: %s\n", file.getName(), mostFrequentWord);
+            System.out.printf("File Name: %s\t\t\tWord: %s\n", file.getName(), mostFrequentWord);
         }
 
         System.out.println("\nSecond iteration:");
         System.out.println("----------------------------------------------------");
         for (File file : filteredFiles) {
             String mostFrequentWord = getMostFrequentWord(file, 7);
-            System.out.printf("File Name: %s\tWord: %s\n", file.getName(), mostFrequentWord);
+            System.out.printf("File Name: %s\t\t\tWord: %s\n", file.getName(), mostFrequentWord);
         }
 
         System.out.println("\nThird iteration:");
         System.out.println("----------------------------------------------------");
         for (File file : filteredFiles) {
             String mostFrequentWord = getMostFrequentWord(file, 8);
-            System.out.printf("File Name: %s\tWord: %s\n", file.getName(), mostFrequentWord);
+            System.out.printf("File Name: %s\t\t\tWord: %s\n", file.getName(), mostFrequentWord);
         }
     }
 
