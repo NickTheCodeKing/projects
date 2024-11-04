@@ -21,25 +21,43 @@ public class WordCount {
         File[] filteredFiles = filterFiles(files);
 
         System.out.println("\nFirst iteration:");
-        System.out.println("----------------------------------------------------");
+        System.out.println("===================================================");
+        long firstIterationStart = System.currentTimeMillis();
         for (File file : filteredFiles) {
             String mostFrequentWord = getMostFrequentWord(file, 6);
             System.out.printf("File Name: %s\t\t\tWord: %s\n", file.getName(), mostFrequentWord);
         }
+        long firstIterationEnd = System.currentTimeMillis();
+        long firstIterationDuration = firstIterationEnd - firstIterationStart;
+        System.out.printf("First iteration duration: %d seconds\n", firstIterationDuration / 1000.0);
 
         System.out.println("\nSecond iteration:");
-        System.out.println("----------------------------------------------------");
+        System.out.println("====================================================");
+        long secondIterationStart = System.currentTimeMillis();
         for (File file : filteredFiles) {
             String mostFrequentWord = getMostFrequentWord(file, 7);
             System.out.printf("File Name: %s\t\t\tWord: %s\n", file.getName(), mostFrequentWord);
         }
+        long secondIterationEnd = System.currentTimeMillis();
+        long secondIterationDuration = secondIterationEnd - secondIterationStart;
+        System.out.printf("Second iteration duration: %d seconds\n", secondIterationDuration / 1000.0);
 
         System.out.println("\nThird iteration:");
-        System.out.println("----------------------------------------------------");
+        System.out.println("===================================================");
+        long thirdIterationStart = System.currentTimeMillis();
         for (File file : filteredFiles) {
             String mostFrequentWord = getMostFrequentWord(file, 8);
             System.out.printf("File Name: %s\t\t\tWord: %s\n", file.getName(), mostFrequentWord);
         }
+        long thirdIterationEnd = System.currentTimeMillis();
+        long thirdIterationDuration = thirdIterationEnd - thirdIterationStart;
+        System.out.printf("Third iteration duration: %d seconds\n", thirdIterationDuration / 1000.0);
+
+        long totalRuntime = thirdIterationDuration + secondIterationDuration + firstIterationDuration;
+
+        System.out.println("========================================================");
+        System.out.printf("Total Runtime: %d\n", totalRuntime / 1000);
+        System.out.println("========================================================");
     }
 
     public static File[] filterFiles(File[] files) {
