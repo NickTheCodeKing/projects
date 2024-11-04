@@ -29,7 +29,7 @@ public class WordCount {
         }
         long firstIterationEnd = System.currentTimeMillis();
         long firstIterationDuration = firstIterationEnd - firstIterationStart;
-        System.out.printf("First iteration duration: %d seconds\n", firstIterationDuration / 1000.0);
+        System.out.printf("First iteration duration: %d seconds\n", firstIterationDuration / 1000);
 
         System.out.println("\nSecond iteration:");
         System.out.println("====================================================");
@@ -40,7 +40,7 @@ public class WordCount {
         }
         long secondIterationEnd = System.currentTimeMillis();
         long secondIterationDuration = secondIterationEnd - secondIterationStart;
-        System.out.printf("Second iteration duration: %d seconds\n", secondIterationDuration / 1000.0);
+        System.out.printf("Second iteration duration: %d seconds\n", secondIterationDuration / 1000);
 
         System.out.println("\nThird iteration:");
         System.out.println("===================================================");
@@ -51,7 +51,7 @@ public class WordCount {
         }
         long thirdIterationEnd = System.currentTimeMillis();
         long thirdIterationDuration = thirdIterationEnd - thirdIterationStart;
-        System.out.printf("Third iteration duration: %d seconds\n", thirdIterationDuration / 1000.0);
+        System.out.printf("Third iteration duration: %d seconds\n", thirdIterationDuration / 1000);
 
         long totalRuntime = thirdIterationDuration + secondIterationDuration + firstIterationDuration;
 
